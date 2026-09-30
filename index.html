@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GoodTunez</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <aside class="sidebar">
+            <div class="brand-block">
+                <p class="brand-kicker">Soundroom</p>
+                <h1>GoodTunez</h1>
+            </div>
+
+            <p class="sidebar-copy">Home of good music and feels.</p>
+
+            <nav aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <a href="#songs">Songs</a>
+                <a href="#artists">Artists</a>
+                <a href="#library">Your Library</a>
+            </nav>
+
+            <div class="search-panel">
+                <label for="searchInput">Search tracks</label>
+                <input id="searchInput" type="search" placeholder="Search songs or artists" aria-label="Search songs or artists">
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="hero" id="home">
+                <div class="hero-content">
+                    <p class="hero-small">Welcome to GoodTunez</p>
+                    <h2>Good Music.<br>Good Vibes.</h2>
+                    <p>Discover tracks that match your mood and keep the energy moving.</p>
+
+                    <div class="hero-actions">
+                        <a href="#songs" class="hero-button primary">Start Listening</a>
+                        <a href="#artists" class="hero-button secondary">Explore Artists</a>
+                    </div>
+                </div>
+
+                <div class="hero-showcase" aria-label="Featured playlist summary">
+                    <div class="stats-card">
+                        <span class="stats-heading">Curated</span>
+                        <strong>24 Tracks</strong>
+                    </div>
+                    <div class="stats-card accent">
+                        <span class="stats-heading">Mood</span>
+                        <strong>Chill + Lift</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section id="songs" class="content-section">
+                <div class="section-heading">
+                    <h2>Recently Added</h2>
+                    <span class="section-tag">Fresh picks</span>
+                </div>
+                <p id="song-status" class="section-status" aria-live="polite">Loading recent tracks…</p>
+                <div id="song-grid" class="song-grid" aria-live="polite"></div>
+            </section>
+
+            <section id="artists" class="content-section">
+                <div class="section-heading">
+                    <h2>Popular Artists</h2>
+                    <span class="section-tag">Trending</span>
+                </div>
+                <div id="artist-grid" class="artist-container"></div>
+            </section>
+
+            <section id="library" class="content-section library-section">
+                <div class="section-heading">
+                    <h2>Your Library</h2>
+                    <span class="section-tag">Saved</span>
+                </div>
+
+                <div class="library-grid">
+                    <div class="library-card">
+                        <span>Recently Played</span>
+                        <strong>Night Drive</strong>
+                    </div>
+                    <div class="library-card">
+                        <span>Favorites</span>
+                        <strong>Late Night</strong>
+                    </div>
+                    <div class="library-card">
+                        <span>Playlists</span>
+                        <strong>Golden Hour</strong>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="player-bar">
+            <div class="player-song">
+                <p class="player-title">No song selected</p>
+                <p class="player-artist">GoodTunez</p>
+            </div>
+
+            <div class="player-controls" aria-label="Player controls">
+                <button id="previous" type="button" aria-label="Previous track">⏮</button>
+                <button id="play" type="button" aria-label="Play or pause">▶</button>
+                <button id="next" type="button" aria-label="Next track">⏭</button>
+            </div>
+
+            <div class="player-progress" aria-label="Track progress">
+                <span id="current-time">0:00</span>
+                <input type="range" id="progress" value="0" aria-label="Track scrubber">
+                <span id="duration">0:00</span>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
